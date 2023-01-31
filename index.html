@@ -43,19 +43,40 @@ body {
 .row {
 	display: flex;
 	flex-wrap: wrap;
-}
+}	
 .side {
 	flex: 20%;
 	background-color: #333333;
-	padding: 20px
+	padding: 20px;
+	max-height: 900px;
 }
 .main {
 	flex: 80%;
 	background-color: #0d0d0d;
 	padding: 20px;
 }
+.imgcontainer {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5px;
+}
+.img {
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	padding: 20px;
+}
+.smallimg {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding: 10px;
+}
 @media screen and (max-width: 700px) {
 	.row {
+		flex-direction: column;
+	}
+	.imgcontainer {
 		flex-direction: column;
 	}
 }
@@ -80,8 +101,6 @@ body {
 	color: white;
 	margin-left: auto;
 	margin-right: auto;
-	width: 50%;
-}
 }
 </style>
 </head>
@@ -94,16 +113,38 @@ body {
 	<a href="https://affinity.serif.com/en-gb/photo/">Affinity Photo</a>
 </div>
 <div class="row">
-	<div class="side">
-	<h2 style="color: white;">Latest Creations:</h2>
+	<div class="side" style="overflow-y:scroll;">
+		<h2 style="color: white;">Latest Creations:</h2>
+		<div class="imgcontainer">
+			<img src="images/basket.jpg" class="smallimg">
+			<img src="images/basketball.png" class="smallimg">
+			<img src="images/castle.png" class="smallimg">
+			<img src="images/cloud.jpg" class="smallimg">
+			<img src="images/dragon.jpg" class="smallimg">
+			<img src="images/dragon2.jpg" class="smallimg">
+			<img src="images/dragon3.jpg" class="smallimg">
+			<img src="images/cloud.jpg" class="smallimg">
+			<img src="images/face.jpg" class="smallimg">
+			<img src="images/face2.jpg" class="smallimg">
+			<img src="images/forest.png" class="smallimg">
+			<img src="images/heaven.jpg" class="smallimg">
+			<img src="images/hogwarts.png" class="smallimg">
+			<img src="images/lebron.jpg" class="smallimg">
+			<img src="images/man.jpg" class="smallimg">
+			<img src="images/messi.png" class="smallimg">
+			<img src="images/mountain.png" class="smallimg">
+			<img src="images/ronaldo.jpg" class="smallimg">
+			<img src="images/spiderman.jpg" class="smallimg">
+			<img src="images/tree.jpg" class="smallimg">
+		</div>
 	</div>
 	<div class="main">
-		<img src="images/lionhead.png" alt="lionhead" class="center">
-		<h4 class="text">Lion Head - Created using Affinity Photo</h4>
-		<img src="images/rollsroyce.png" alt="rollsroyce" class="center">
-		<h4 class="text">Rolls Royce Art - Created using Affinity Photo</h4>
-		<img src="images/lamborghini.png" alt="lamborghini" class="center">
-		<h4 class="text">Lamborghini Art - Created using Affinity Photo</h4>
+		<div class="imgcontainer">
+				<img src="images/rollsroyce.png" class="img">
+				<img src="images/lamborghini.png" class="img">
+				<img src="images/lionhead.png" class="img">
+				<img src="images/cloud.jpg" class="img">
+		</div>
 	</div>
 </div>
 <div class="footer">
